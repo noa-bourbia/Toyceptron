@@ -67,6 +67,8 @@ net = Network(input_size=3, activation=act_sigmoid)     # Création d'un objet n
     # Ce que Felix ici décrit comme une couche cachée est en réalité toutes les couches intermédiaires autre que la couche d'inputs et la couche de sortie
 
 net.add(                    # ok donc il existe une fonction add à net
+                            # Cette fonction semble permettre d'ajouter une couche avec en paramètre les poids et biais des neurones de la couche
+                            # Elle doit donc créer le nombre de neurones correspondant et leur attribuer ces paramètres
     weights=[               # matrice des poids (la couche 0 a 3 "neurones" et la couche 1 en a 2)
         [0.2, -0.1, 0.4],
         [-0.4, 0.3, 0.1],
@@ -84,7 +86,7 @@ net.add(
     biases=[0.0, 0.1, -0.1],
 )
 
-# 3. Couche de sortie
+# 3. Couche de sortie (ici elle a 2 neurones)
 net.add(
     weights=[
         [0.3, -0.1, 0.2],  # taille = nombre de neurones couche 2
