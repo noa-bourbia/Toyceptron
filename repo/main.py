@@ -20,7 +20,7 @@ print("Input:", x)
 
 # --- Test neurone individuel ---
 print("\n--- Test Neuron ---")
-# les neurones ont 3 biais pour correspondre à la taille de notre input
+# les neurones ont 3 poids pour correspondre à la taille de notre input
 n1 = Neuron(weights=[0.2, -0.1, 0.4], bias=0.0)     # Création d'un objet neurone n1
 n2 = Neuron(weights=[-0.4, 0.3, 0.1], bias=0.1)
 
